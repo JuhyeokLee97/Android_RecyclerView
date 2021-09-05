@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var etPlayerNumber: EditText
     lateinit var btnAddPlayer: Button
     lateinit var recyclerView: RecyclerView
+
     // player List create
     lateinit var playerList: ArrayList<SoccerPlayer>
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,7 +28,7 @@ class MainActivity : AppCompatActivity() {
 
         // Init PlayerList Item
         playerList = ArrayList<SoccerPlayer>()
-        playerList.add(SoccerPlayer("Messi", "Foward", "10"))
+        playerList.add(SoccerPlayer("Messi", "Forward", "10"))
 
         // Set RecyclerView Adapter
         var adapter = MyRecyclerViewAdapter(playerList)
@@ -43,6 +44,5 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
-
 
 }

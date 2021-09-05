@@ -10,5 +10,4 @@ class SoccerPlayer(_name: String, _position: String, _number: String) {
         position = _position
         number = _number
     }
-
 }
