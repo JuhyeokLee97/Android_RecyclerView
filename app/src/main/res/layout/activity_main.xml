@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_player_name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Player\nName"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/et_player_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:hint="Messi" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_player_position"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@id/ll_player_name"
+        app:layout_constraintTop_toBottomOf="@id/ll_player_name">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Position"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/et_player_position"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:hint="FW" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_player_number"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@id/ll_player_position"
+        app:layout_constraintTop_toBottomOf="@id/ll_player_position">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Player Number"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/et_player_number"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:hint="10" />
+    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:id="@+id/btn_add_player"
+        android:text="저장하기"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        app:layout_constraintTop_toBottomOf="@id/ll_player_number"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="60dp"
+        android:id="@+id/rv_player_info"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/btn_add_player"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
