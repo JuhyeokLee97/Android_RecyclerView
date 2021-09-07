@@ -9,7 +9,6 @@
 
 ## MainActivity Layout: activity_main.xml 작성 
 축구 선수의 이름, 포지션  그리고 번호를 입력 받아서 “저장하기” 버튼을 눌렀을 때, RecyclerView에 정보가 보여지는 레이아웃입니다.
-!(main_UI)(C:/Users/juhyeok/Desktop/Study/Android Layout or View/RecyclerView Main UI.jpg)
 
 RecycerView  속성 중 “app:layoutManager”은 RecyclerView에서 아이템들을 어떤 형태로 보여줄 지 정보를 담는 중요한 속성입니다. 이번 예제에서는 “LinearLayoutManager”를 사용해 일렬로 나타내 보겠습니다.
 
